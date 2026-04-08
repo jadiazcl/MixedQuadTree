@@ -1096,7 +1096,7 @@ namespace Clobscode
             }
             
             auto end_refine_rl_time = chrono::high_resolution_clock::now();
-            cout << "         * level " << i << " in "
+            cout << "         * level " << i << " (#" << new_candidates.size() << ") in "
             << std::chrono::duration_cast<chrono::milliseconds>(end_refine_rl_time-start_refine_rl_time).count();
             cout << " ms";
             
@@ -1238,7 +1238,7 @@ namespace Clobscode
 #endif
 
         auto end_refine_quad_time = chrono::high_resolution_clock::now();
-        cout << "       * Refine Quad in "
+        cout << "       * Refine Quad (#" << candidates.size() << ") in "
         << std::chrono::duration_cast<chrono::milliseconds>(end_refine_quad_time-start_refine_quad_time).count();
         cout << " ms"<< endl;
 
@@ -1292,7 +1292,7 @@ namespace Clobscode
 #endif
 
         auto end_time = chrono::high_resolution_clock::now();
-        cout << "       * Transition Patterns in "
+        cout << "       * Transition Patterns (#" << Quadrants.size() << ") in "
         << std::chrono::duration_cast<chrono::milliseconds>(end_time-end_refine_quad_time).count();
         cout << " ms"<< endl;
         cout << "    * generateQuadtreeMesh in "
