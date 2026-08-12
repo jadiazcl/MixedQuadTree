@@ -215,7 +215,7 @@ namespace Clobscode
         //The output will be a one-irregular mesh.
         generateQuadtreeMesh(rl,input,all_reg,name,0,debugging,Quadrants.size());
         
-        Services::WriteQuadtreeMesh(name,points,Quadrants,MapEdges,gt);
+        //Services::WriteQuadtreeMesh(name,points,Quadrants,MapEdges,gt); (descomentar despues)
         //Some Quads will be then removed due to proximity with the surface.
         //However we must preserve them if the oct mesh to avoid congruency
         //problems. For this reason we will keep track of removed quads
